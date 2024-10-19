@@ -1,0 +1,53 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "/mp5 hub",
+   LoadingTitle = "mp5 hub Loading",
+   LoadingSubtitle = "by interlude",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = mp5hubby, -- Create a custom folder for your hub/game
+      FileName = "MP5 Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = ".gg/jJhFM6MTpw", 
+      RememberJoins = false 
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "idfk",
+      Subtitle = "Key System",
+      Note = "CHECK THE DISCORD SERVER FOR KEY!!!",
+      FileName = "mp5hubontop",
+      SaveKey = true, 
+      GrabKeyFromSite = false,
+      Key = {"mp5hub4life"} 
+   }
+})
+
+local exampleTab = Window:CreateTab("Run Fast", 4483362458) -- Title, Image
+
+local Button = exampleTab:CreateButton({
+   Name = "Run Fast",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+local defaultWalkSpeed = 16
+local boostedWalkSpeed = 45 -- New speed when button is clicked
+
+-- Function to boost speed
+local function boostSpeed()
+    player.Character.Humanoid.WalkSpeed = boostedWalkSpeed
+    wait(9999999) -- Duration for the speed boost
+    player.Character.Humanoid.WalkSpeed = defaultWalkSpeed -- Reset speed
+end
+   end,
+})
+
+local Toggle = exampleTab:CreateToggle({
+   Name = "GO SUB TO 9ine_ya_heard DO IT NOW",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+   end,
+})
